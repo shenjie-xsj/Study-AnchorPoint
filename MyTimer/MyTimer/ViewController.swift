@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setView()
-        
+        tick()
         self.timer = Timer.scheduledTimer(timeInterval: TimeInterval(1.0), target: self, selector: #selector(tick), userInfo: nil, repeats: true)
     }
 
@@ -44,6 +44,11 @@ class ViewController: UIViewController {
         secondView.layer.contents = image
         secondView.layer.contentsGravity = kCAGravityResizeAspect
         secondView.layer.contentsRect = CGRect(x: 0.87916666666667, y: 0.14702450408, width: 0.04333333333, height: 0.38856476079)
+        
+        //更改锚点以解决旋转中心点问题
+        hourView.layer.anchorPoint = CGPoint(x: 0.5, y: 0.67073684211)
+        minuteView.layer.anchorPoint = CGPoint(x: 0.5, y: 0.7666666667)
+        secondView.layer.anchorPoint = CGPoint(x: 0.5, y: 0.75988130564)
     }
     
     @objc func tick() {
