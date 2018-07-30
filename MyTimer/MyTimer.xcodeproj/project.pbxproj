@@ -14,6 +14,7 @@
 		0894A2B9210EF947005D098F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0894A2B7210EF947005D098F /* LaunchScreen.storyboard */; };
 		0894A2C4210EF947005D098F /* MyTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0894A2C3210EF947005D098F /* MyTimerTests.swift */; };
 		0894A2CF210EF947005D098F /* MyTimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0894A2CE210EF947005D098F /* MyTimerUITests.swift */; };
+		0894A2DE210EF9B0005D098F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0894A2DD210EF9B0005D098F /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		0894A2CA210EF947005D098F /* MyTimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyTimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0894A2CE210EF947005D098F /* MyTimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTimerUITests.swift; sourceTree = "<group>"; };
 		0894A2D0210EF947005D098F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0894A2DD210EF9B0005D098F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0894A2DE210EF9B0005D098F /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 				0894A2C2210EF947005D098F /* MyTimerTests */,
 				0894A2CD210EF947005D098F /* MyTimerUITests */,
 				0894A2AC210EF944005D098F /* Products */,
+				0894A2DC210EF9AF005D098F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +127,14 @@
 				0894A2D0210EF947005D098F /* Info.plist */,
 			);
 			path = MyTimerUITests;
+			sourceTree = "<group>";
+		};
+		0894A2DC210EF9AF005D098F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0894A2DD210EF9B0005D098F /* QuartzCore.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
