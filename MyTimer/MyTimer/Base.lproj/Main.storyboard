@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +15,66 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyTimer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U53-J5-5fm">
+                                <rect key="frame" x="0.0" y="156" width="375" height="375"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MJP-sN-jWb">
+                                        <rect key="frame" x="179" y="112" width="16" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="16" id="KJB-HY-Xuu"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MVm-VY-Icc">
+                                        <rect key="frame" x="179.5" y="112.5" width="16" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="16" id="XRK-Y9-UUa"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sJt-ZY-T1g">
+                                        <rect key="frame" x="179.5" y="112.5" width="16" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="16" id="d9i-NO-ErD"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="sJt-ZY-T1g" firstAttribute="centerY" secondItem="U53-J5-5fm" secondAttribute="centerY" id="17I-8L-If6"/>
+                                    <constraint firstItem="MVm-VY-Icc" firstAttribute="centerX" secondItem="U53-J5-5fm" secondAttribute="centerX" id="1fU-BX-e05"/>
+                                    <constraint firstItem="sJt-ZY-T1g" firstAttribute="height" secondItem="U53-J5-5fm" secondAttribute="height" multiplier="0.4" id="KM4-Gs-eum"/>
+                                    <constraint firstItem="MJP-sN-jWb" firstAttribute="centerY" secondItem="U53-J5-5fm" secondAttribute="centerY" id="MWF-pC-oZx"/>
+                                    <constraint firstItem="sJt-ZY-T1g" firstAttribute="centerX" secondItem="U53-J5-5fm" secondAttribute="centerX" id="SUB-fB-PZW"/>
+                                    <constraint firstItem="MVm-VY-Icc" firstAttribute="height" secondItem="U53-J5-5fm" secondAttribute="height" multiplier="0.4" id="T2I-mJ-074"/>
+                                    <constraint firstItem="MJP-sN-jWb" firstAttribute="centerX" secondItem="U53-J5-5fm" secondAttribute="centerX" id="Ule-qR-BPs"/>
+                                    <constraint firstAttribute="width" constant="375" id="i6J-WN-07s"/>
+                                    <constraint firstItem="MJP-sN-jWb" firstAttribute="height" secondItem="U53-J5-5fm" secondAttribute="height" multiplier="0.4" id="mvO-LN-TE1"/>
+                                    <constraint firstItem="MVm-VY-Icc" firstAttribute="centerY" secondItem="U53-J5-5fm" secondAttribute="centerY" id="vk0-xd-TAn"/>
+                                    <constraint firstAttribute="width" secondItem="U53-J5-5fm" secondAttribute="height" multiplier="1:1" id="xNl-vC-g0R"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="U53-J5-5fm" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="cZk-ow-SKa"/>
+                            <constraint firstItem="U53-J5-5fm" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="eAq-MR-BbO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="backWidth" destination="i6J-WN-07s" id="pT1-J4-cs9"/>
+                        <outlet property="hourView" destination="MJP-sN-jWb" id="d4W-o6-xwb"/>
+                        <outlet property="minuteView" destination="MVm-VY-Icc" id="T2A-Af-vK6"/>
+                        <outlet property="secondView" destination="sJt-ZY-T1g" id="JiJ-Am-DWp"/>
+                        <outlet property="timeBack" destination="U53-J5-5fm" id="fOX-HT-vGm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>
     </scenes>
 </document>
